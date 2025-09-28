@@ -2946,6 +2946,13 @@
   --sidebar-ring: oklch(.439 0 0);
 }
 
+/* Ensure body has a default background */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 html {
   font-size: var(--font-size);
   scroll-behavior: smooth;
