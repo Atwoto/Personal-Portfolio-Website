@@ -1,36 +1,12 @@
-import { useState, useEffect } from 'react';
 import { Button } from './ui/button';
 import { Moon, Sun } from 'lucide-react';
+import { useTheme } from './ThemeProvider';
 
 export function DarkModeToggle() {
-  const [isDark, setIsDark] = useState(false);
-
-  useEffect(() => {
-    // Check for saved theme preference or default to light mode
-    if (typeof window !== 'undefined') {
-      const savedTheme = localStorage.getItem('theme');
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      
-      if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-        setIsDark(true);
-        document.documentElement.classList.add('dark');
-      }
-    }
-  }, []);
+  const { theme, setTheme } = useTheme();
 
   const toggleDarkMode = () => {
-    if (typeof window !== 'undefined') {
-      const newIsDark = !isDark;
-      setIsDark(newIsDark);
-      
-      if (newIsDark) {
-        document.documentElement.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-        localStorage.setItem('theme', 'light');
-      }
-    }
+    setTheme(theme === 'dark' ? 'light' : 'dark');
   };
 
   return (
@@ -43,12 +19,12 @@ export function DarkModeToggle() {
       <div className="relative w-6 h-6">
         <Sun 
           className={`absolute inset-0 w-6 h-6 text-yellow-500 transition-all duration-300 ${
-            isDark ? 'rotate-90 scale-0 opacity-0' : 'rotate-0 scale-100 opacity-100'
+            theme === 'dark' ? 'rotate-90 scale-0 opacity-0' : 'rotate-0 scale-100 opacity-100'
           }`}
         />
         <Moon 
           className={`absolute inset-0 w-6 h-6 text-blue-400 transition-all duration-300 ${
-            isDark ? 'rotate-0 scale-100 opacity-100' : '-rotate-90 scale-0 opacity-0'
+            theme === 'dark' ? 'rotate-0 scale-100 opacity-100' : '-rotate-90 scale-0 opacity-0'
           }`}
         />
       </div>
