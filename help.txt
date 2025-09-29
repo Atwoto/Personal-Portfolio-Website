@@ -1,30 +1,16 @@
-01:31:17.780 Running build in Washington, D.C., USA (East) – iad1
-01:31:17.780 Build machine configuration: 2 cores, 8 GB
-01:31:17.795 Cloning github.com/Atwoto/Personal-Portfolio-Website (Branch: main, Commit: 127f6e0)
-01:31:17.925 Previous build caches not available
-01:31:18.059 Cloning completed: 264.000ms
-01:31:18.464 Running "vercel build"
-01:31:18.868 Vercel CLI 48.1.6
-01:31:19.462 Installing dependencies...
-01:31:27.253 
-01:31:27.253 added 154 packages in 7s
-01:31:27.253 
-01:31:27.254 11 packages are looking for funding
-01:31:27.254   run `npm fund` for details
-01:31:27.309 Running "npm run build"
-01:31:27.433 
-01:31:27.433 > Personal Portfolio Website@0.1.0 build
-01:31:27.433 > vite build
-01:31:27.433 
-01:31:27.859 [36mvite v6.3.5 [32mbuilding for production...[36m[39m
-01:31:27.918 transforming...
-01:31:30.816 [32m✓[39m 2014 modules transformed.
-01:31:31.098 rendering chunks...
-01:31:31.108 computing gzip size...
-01:31:31.123 [2mdist/[22m[32mindex.html                                                    [39m[1m[2m  0.44 kB[22m[1m[22m[2m │ gzip:   0.28 kB[22m
-01:31:31.124 [2mdist/[22m[2massets/[22m[32meeff169db0d81386c31a503d2990a706cc96a026-DZQ_gmRq.png  [39m[1m[2m 95.41 kB[22m[1m[22m
-01:31:31.127 [2mdist/[22m[2massets/[22m[35mindex-CZxrUcs3.css                                     [39m[1m[2m 68.27 kB[22m[1m[22m[2m │ gzip:  10.17 kB[22m
-01:31:31.127 [2mdist/[22m[2massets/[22m[36mindex-DW-WLJUU.js                                      [39m[1m[2m348.21 kB[22m[1m[22m[2m │ gzip: 110.06 kB[22m
-01:31:31.128 [32m✓ built in 3.24s[39m
-01:31:31.171 Error: No Output Directory named "build" found after the Build completed. Configure the Output Directory in your Project Settings. Alternatively, configure vercel.json#outputDirectory.
-01:31:31.171 Learn More: https://vercel.link/missing-public-directory
+Duka Insights AI Chatbot (POC)
+Proof of Concept for a business intelligence assistant
+
+Problem: Business owners lacked quick access to real-time, actionable insights across sales, customers, and inventory.
+
+Solution: Built a POC chatbot in n8n integrated with Google Gemini and multiple APIs that:
+
+Interprets natural language questions
+
+Routes queries to the correct data sources
+
+Fetches analytics in real time
+
+Generates structured insights (financial breakdowns, comparisons, recommendations)
+
+Outcome: Demonstrated the potential for an on-demand AI assistant to accelerate decision-making, with promising early results in analytics delivery and user engagement.

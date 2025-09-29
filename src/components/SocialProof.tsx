@@ -5,26 +5,33 @@ import { Quote, Star, Award } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Hammton's AI automation solutions transformed our digital workflows, increasing our client engagement by 40% and significantly improving our operational efficiency across all departments.",
+    quote: "Hammton built and deployed a custom AI chatbot for us using Voiceflow, designed to streamline customer engagement on our website. The solution has made it easier for clients to explore our services, get instant answers, and connect with our team. This automation has reduced response times, improved lead capture, and strengthened our overall digital experience.",
     author: "Digital Qatalyst Team",
-    role: "UAE Company",
+    role: "Dubai Company (UAE)",
     company: "Digital Qatalyst",
     rating: 5
   },
   {
-    quote: "The solar energy automation system Hammton developed streamlined our customer onboarding process and reduced response times by 60%, making renewable energy more accessible to Kenyan families.",
+    quote: "Hammtton developed a custom AI chatbot for our solar company, Bills On Solar. The assistant now helps customers explore products, get answers about solar energy, and even manage their shopping cart. This automation has streamlined our onboarding process, reduced response times, and made renewable energy more accessible to Kenyan families.",
     author: "Operations Team",
-    role: "Solar Organization", 
-    company: "Dubai Bills ON Solar Kenya",
+    role: "Bills On Solar – Kenya",
+    company: "Bills On Solar",
     rating: 5
   },
   {
-    quote: "Hammton's expertise in AI workflow automation helped us scale our personal development programs efficiently, enabling us to reach more individuals seeking growth and transformation.",
+    quote: "Hammtton's expertise in AI automation has been invaluable in scaling my book-selling platform and maximizing profitability. His guidance in integrating AI-driven workflows has not only boosted sales but also improved efficiency in how my readers engage with my work. Beyond that, his strategic support in applying AI to broader initiatives continues to open new opportunities for growth and transformation.",
     author: "Mary Wamae",
-    role: "Former Executive Equity Director",
-    company: "Self Mind Harvest",
+    role: "Former Executive Director, Equity Group Holdings – Kenya",
+    company: "Equity Group Holdings",
     rating: 5,
     link: "https://en.wikipedia.org/wiki/Mary_Wangari_Wamae"
+  },
+  {
+    quote: "Working with Hammtton allowed us to enhance how we deliver value to our clients. By integrating AI workflows and automation into Self Mind Harvest's processes, our training, onboarding, and client engagement became more seamless, efficient, and scalable. The result: better client retention, faster follow-ups, and greater impact across our programs.",
+    author: "Leadership Team",
+    role: "Self Mind Harvest – Kenya",
+    company: "Self Mind Harvest",
+    rating: 5
   }
 ];
 

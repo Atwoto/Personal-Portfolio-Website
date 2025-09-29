@@ -6,19 +6,19 @@ import { useState } from "react";
 const skillCategories = [
   {
     category: "🚀 Automation Platforms",
-    skills: ["n8n", "Zapier", "Make", "Power Automate", "Integromat"],
+    skills: ["n8n", "Zapier", "Make", "Integromat"],
     icon: "⚡",
     gradient: "from-blue-500 to-cyan-400"
   },
   {
     category: "🧠 AI & Machine Learning",
-    skills: ["GPT-4", "Google Gemini", "Claude", "Custom Models", "LangChain", "Hugging Face"],
+    skills: ["GPT-4", "Google Gemini", "Claude", "Custom Models", "LangChain"],
     icon: "🤖",
     gradient: "from-purple-500 to-pink-400"
   },
   {
     category: "📊 Data & Integration", 
-    skills: ["Airtable", "APIs", "Python", "SQL", "MongoDB", "Webhook Management", "OAuth"],
+    skills: ["Airtable", "APIs", "Python", "SQL", "Webhook Management"],
     icon: "🔗",
     gradient: "from-green-500 to-emerald-400"
   },

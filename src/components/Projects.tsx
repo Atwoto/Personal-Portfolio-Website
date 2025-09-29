@@ -32,7 +32,7 @@ const projects = [
     id: 3,
     title: "🎯 Sub AI Lead Agent", 
     description: "Advanced lead nurturing system with behavioral scoring and automated multi-channel follow-ups",
-    tags: ["Airtable", "Zapier", "AI Models"],
+    tags: ["n8n", "Airtable", "Zapier", "AI Models"],
     impact: "300% increase in conversions",
     gradient: "from-purple-500 to-pink-400",
     icon: Target,
@@ -41,8 +41,8 @@ const projects = [
   {
     id: 4,
     title: "📧 AI Email Analysis Agent",
-    description: "Smart email intelligence platform that processes, categorizes, and summarizes communications with actionable insights",
-    tags: ["Python", "NLP", "Email APIs"],
+    description: "Smart email intelligence platform that processes, categorates, and summarizes communications with actionable insights",
+    tags: ["n8n", "Python", "NLP", "Email APIs"],
     impact: "75% faster email processing",
     gradient: "from-green-500 to-emerald-400",
     icon: Mail,
@@ -51,9 +51,9 @@ const projects = [
   {
     id: 5,
     title: "📊 Duka Insights AI Chatbot",
-    description: "Business intelligence assistant that transforms complex data into conversational insights and strategic recommendations",
-    tags: ["Google Gemini", "Dashboard APIs"],
-    impact: "60% faster decision making",
+    description: "Proof of Concept for a business intelligence assistant. Problem: Business owners lacked quick access to real-time, actionable insights across sales, customers, and inventory. Solution: Built a POC chatbot in n8n integrated with Google Gemini and multiple APIs that interprets natural language questions, routes queries to the correct data sources, fetches analytics in real time, and generates structured insights. Impact: Demonstrated potential for accelerating decision-making with promising early results.",
+    tags: ["n8n", "Google Gemini", "Dashboard APIs"],
+    impact: "POC - Promising results",
     gradient: "from-orange-500 to-red-400",
     icon: BarChart3,
     metrics: ["Natural language queries", "Real-time analytics", "Multi-source data"]

@@ -44,6 +44,10 @@ export function Hero() {
               Hammton Ndeke
             </h1>
             
+            <p className="text-xl md:text-2xl text-blue-300 font-medium">
+              Building Smart Automations with AI + N8n
+            </p>
+            
             <div className="text-2xl md:text-3xl h-16">
               <AnimatedText 
                 texts={roles}
@@ -75,6 +79,12 @@ export function Hero() {
           <Button 
             size="lg" 
             className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 rounded-xl shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105 hover:rotate-1"
+            onClick={() => {
+              const projectsElement = document.getElementById('projects');
+              if (projectsElement) {
+                projectsElement.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
           >
             <span className="relative z-10">Explore My Work</span>
           </Button>

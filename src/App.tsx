@@ -182,6 +182,9 @@ export default function App() {
               <p className="text-gray-500 text-sm mb-2">
                 © 2025 Hammton Ndeke. All rights reserved.
               </p>
+              <p className="text-gray-400 text-sm mb-1">
+                Let's build smarter systems — AI & N8n Automations.
+              </p>
               <p className="text-gray-600 text-xs">
                 Crafted with ❤️ and powered by AI automation
               </p>
