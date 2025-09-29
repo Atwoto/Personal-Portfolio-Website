@@ -21,8 +21,8 @@ const testimonials = [
   {
     quote: "Hammton's expertise in AI automation has been invaluable in scaling my book-selling platform and maximizing profitability. His guidance in integrating AI-driven workflows has not only boosted sales but also improved efficiency in how my readers engage with my work. Beyond that, his strategic support in applying AI to broader initiatives continues to open new opportunities for growth and transformation.",
     author: "Mary Wamae",
-    role: "Former Executive Director, Equity Group Holdings – Kenya",
-    company: "Equity Group Holdings",
+    role: "Former Executive Director, TVG – Kenya",
+    company: "TVG",
     rating: 5,
     link: "https://en.wikipedia.org/wiki/Mary_Wangari_Wamae"
   },
@@ -43,7 +43,7 @@ const certifications = [
 ];
 
 const companies = [
-  "TechFlow", "DataCorp", "GrowthLab", "AutomateXYZ", "FlowMaster", "AICore"
+  "Bills on Solar", "TVG", "Sambright", "Self Mind", "Digital Qatalyst", "Tunza Jamii properties", "Sambright limited company"
 ];
 
 export function SocialProof() {
@@ -75,8 +75,8 @@ export function SocialProof() {
         <div className="mb-20">
           <motion.h2 
             className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
             What Organizations Say
@@ -86,8 +86,8 @@ export function SocialProof() {
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 h-full bg-gradient-to-br from-white to-gray-50">
@@ -134,7 +134,7 @@ export function SocialProof() {
         >
           <h3 className="text-2xl font-bold mb-8 flex items-center justify-center gap-2">
             <Award className="w-6 h-6 text-blue-500" />
-            Certifications & Expertise
+            Expertise
           </h3>
           
           <div className="flex flex-wrap justify-center gap-4">

@@ -7,7 +7,7 @@ const funFacts = [
   { icon: Coffee, text: "1000+ coffees consumed while debugging", color: "text-amber-600" },
   { icon: Code, text: "Dreams in n8n workflows", color: "text-blue-600" },
   { icon: Brain, text: "Always thinking in automation", color: "text-purple-600" },
-  { icon: Users, text: "Helped 50+ businesses scale", color: "text-green-600" }
+  { icon: Users, text: "Helped 10+ small business scale", color: "text-green-600" }
 ];
 
 export function About() {
@@ -75,7 +75,7 @@ export function About() {
             {/* Achievements */}
             <div className="flex flex-wrap gap-3">
               <Badge variant="outline" className="bg-gradient-to-r from-blue-50 to-cyan-50 border-blue-200 text-blue-700">
-                5+ Years Experience
+                2 Years Experience
               </Badge>
               <Badge variant="outline" className="bg-gradient-to-r from-purple-50 to-pink-50 border-purple-200 text-purple-700">
                 AI Automation Expert

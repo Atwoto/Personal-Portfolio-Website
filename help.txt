@@ -1,16 +1,1 @@
-Duka Insights AI Chatbot (POC)
-Proof of Concept for a business intelligence assistant
-
-Problem: Business owners lacked quick access to real-time, actionable insights across sales, customers, and inventory.
-
-Solution: Built a POC chatbot in n8n integrated with Google Gemini and multiple APIs that:
-
-Interprets natural language questions
-
-Routes queries to the correct data sources
-
-Fetches analytics in real time
-
-Generates structured insights (financial breakdowns, comparisons, recommendations)
-
-Outcome: Demonstrated the potential for an on-demand AI assistant to accelerate decision-making, with promising early results in analytics delivery and user engagement.
+change experience to 2  years then business put 10+ small business scale then on mary wamae instead of Equity Group Holdings change to this TVG on the comment sections and also make the what rganisation ay comments to have animation of moving from right to left that animation on trusted by  innovative companies put this companies Bills on Solar, TVG , Sambright, Self Mind, Digital Qatalyst, Tunza Jamii properties and Sambright limited company then on the certifications only use the word Expertise 
