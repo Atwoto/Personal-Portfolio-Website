@@ -133,7 +133,7 @@ export default function App() {
           {/* Mobile Navigation Menu */}
           {isMobileMenuOpen && (
             <motion.div 
-              className="md:hidden mt-4 space-y-2 pb-4"
+              className="md:hidden mt-4 space-y-1 pb-4 bg-white dark:bg-slate-800 rounded-lg shadow-lg p-2"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
@@ -147,7 +147,7 @@ export default function App() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="block w-full text-left py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md"
+                  className="block w-full text-left py-3 px-4 text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md font-medium"
                 >
                   {item.name}
                 </button>
