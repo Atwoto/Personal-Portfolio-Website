@@ -14,6 +14,7 @@ import { motion } from 'motion/react';
 export default function App() {
   const [currentView, setCurrentView] = useState<'portfolio' | 'case-study'>('portfolio');
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,13 +30,22 @@ export default function App() {
     const element = document.getElementById(sectionId);
     if (element) {
       const navbarHeight = 80; // Account for fixed navbar height
+      
       const elementPosition = element.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
       
       window.scrollTo({
         top: elementPosition,
         behavior: 'smooth'
       });
+      
+      // Close mobile menu after clicking
+      setIsMobileMenuOpen(false);
     }
+  };
+
+  // Toggle mobile menu
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   if (currentView === 'case-study') {
@@ -69,7 +79,26 @@ export default function App() {
               Hammton Ndeke
             </motion.div>
             
-            <div className="flex items-center space-x-8">
+            <div className="flex items-center space-x-4">
+              {/* Mobile Menu Button */}
+              <div className="md:hidden">
+                <button 
+                  className="text-gray-600 dark:text-gray-300 focus:outline-none"
+                  onClick={toggleMobileMenu}
+                  aria-label="Menu"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    {isMobileMenuOpen ? (
+                      // Close icon (X)
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                    ) : (
+                      // Hamburger icon
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                    )}
+                  </svg>
+                </button>
+              </div>
+              
               {/* Desktop Navigation */}
               <div className="hidden md:flex items-center space-x-8">
                 {[
@@ -100,6 +129,31 @@ export default function App() {
               <DarkModeToggle />
             </div>
           </div>
+          
+          {/* Mobile Navigation Menu */}
+          {isMobileMenuOpen && (
+            <motion.div 
+              className="md:hidden mt-4 space-y-2 pb-4"
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+            >
+              {[
+                { name: 'Projects', id: 'projects' },
+                { name: 'Skills', id: 'skills' },
+                { name: 'About', id: 'about' },
+                { name: 'Contact', id: 'contact' }
+              ].map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className="block w-full text-left py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md"
+                >
+                  {item.name}
+                </button>
+              ))}
+            </motion.div>
+          )}
         </div>
       </motion.nav>
 
