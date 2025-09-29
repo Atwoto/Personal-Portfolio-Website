@@ -2,6 +2,7 @@ import { Card, CardContent } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { motion } from "motion/react";
 import { Quote, Star, Award } from "lucide-react";
+import { TestimonialCarousel } from "./TestimonialCarousel";
 
 const testimonials = [
   {
@@ -61,7 +62,7 @@ export function SocialProof() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-sm text-gray-500 mb-8 uppercase tracking-wide">Trusted by innovative companies</p>
+          <p className="text-sm text-gray-500 mb-8 uppercase tracking-wide">Trusted by 10+ innovative companies to automate their workflows</p>
           <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
             {companies.map((company, index) => (
               <div key={index} className="text-xl font-semibold text-gray-400 hover:text-gray-600 transition-colors">
@@ -73,56 +74,7 @@ export function SocialProof() {
 
         {/* Testimonials */}
         <div className="mb-20">
-          <motion.h2 
-            className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            What Organizations Say
-          </motion.h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 h-full bg-gradient-to-br from-white to-gray-50">
-                  <CardContent className="p-6 space-y-4">
-                    <div className="flex justify-between items-start">
-                      <Quote className="w-8 h-8 text-blue-500 opacity-60" />
-                      <div className="flex gap-1">
-                        {[...Array(testimonial.rating)].map((_, i) => (
-                          <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                        ))}
-                      </div>
-                    </div>
-                    
-                    <p className="text-gray-600 leading-relaxed italic">
-                      "{testimonial.quote}"
-                    </p>
-                    
-                    <div className="pt-4 border-t border-gray-100">
-                      <p className="font-semibold text-gray-900">
-                        {testimonial.link ? (
-                          <a href={testimonial.link} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors">
-                            {testimonial.author}
-                          </a>
-                        ) : (
-                          testimonial.author
-                        )}
-                      </p>
-                      <p className="text-sm text-gray-500">{testimonial.role}</p>
-                      <p className="text-sm text-blue-600 font-medium">{testimonial.company}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
+          <TestimonialCarousel />
         </div>
 
         {/* Certifications */}

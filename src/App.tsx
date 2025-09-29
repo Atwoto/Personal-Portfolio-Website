@@ -80,8 +80,8 @@ export default function App() {
             </motion.div>
             
             <div className="flex items-center space-x-4">
-              {/* Mobile Menu Button */}
-              <div className="md:hidden">
+              {/* Mobile Menu Button - shown on mobile (<1024px) */}
+              <div className="lg:hidden">
                 <button 
                   className="text-gray-600 dark:text-gray-300 focus:outline-none"
                   onClick={toggleMobileMenu}
@@ -99,8 +99,8 @@ export default function App() {
                 </button>
               </div>
               
-              {/* Desktop Navigation */}
-              <div className="hidden md:flex items-center space-x-8">
+              {/* Desktop Navigation - shown on desktop (≥1024px) */}
+              <div className="hidden lg:flex items-center space-x-8">
                 {[
                   { name: 'Projects', id: 'projects' },
                   { name: 'Skills', id: 'skills' },
@@ -133,7 +133,7 @@ export default function App() {
           {/* Mobile Navigation Menu */}
           {isMobileMenuOpen && (
             <motion.div 
-              className="md:hidden mt-4 space-y-1 pb-4 bg-white dark:bg-slate-800 rounded-lg shadow-lg p-2"
+              className="lg:hidden mt-4 space-y-1 pb-4 bg-white dark:bg-slate-800 rounded-lg shadow-lg p-2"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
@@ -233,6 +233,16 @@ export default function App() {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
+              <p className="text-gray-400 text-sm mb-2 text-center">
+                Trusted by 10+ innovative companies to automate their workflows
+              </p>
+              <div className="flex flex-wrap justify-center gap-4 mb-4">
+                {["Bills on Solar", "TVG", "Sambright", "Self Mind", "Digital Qatalyst", "Tunza Jamii Properties", "Sambright Limited Company"].map((company, index) => (
+                  <span key={index} className="text-gray-300 text-sm bg-gray-800 px-3 py-1 rounded-full">
+                    {company}
+                  </span>
+                ))}
+              </div>
               <p className="text-gray-500 text-sm mb-2">
                 © 2025 Hammton Ndeke. All rights reserved.
               </p>
