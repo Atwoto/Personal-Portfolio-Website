@@ -55,22 +55,7 @@ export function SocialProof() {
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-purple-100 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse"></div>
       
       <div className="max-w-6xl mx-auto relative z-10">
-        {/* Company Logos */}
-        <motion.div 
-          className="text-center mb-20"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <p className="text-sm text-gray-500 mb-8 uppercase tracking-wide">Trusted by 10+ innovative companies to automate their workflows</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-            {companies.map((company, index) => (
-              <div key={index} className="text-xl font-semibold text-gray-400 hover:text-gray-600 transition-colors">
-                {company}
-              </div>
-            ))}
-          </div>
-        </motion.div>
+        {/* Removed the external companies/"Trusted by" block as requested */}
 
         {/* Testimonials */}
         <div className="mb-20">

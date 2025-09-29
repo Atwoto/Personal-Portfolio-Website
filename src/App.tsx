@@ -80,8 +80,8 @@ export default function App() {
             </motion.div>
             
             <div className="flex items-center space-x-4">
-              {/* Mobile Menu Button - shown on mobile (<1024px) */}
-              <div className="lg:hidden">
+              {/* Mobile Menu Button - visible only below lg */}
+              <div className="block sm:block md:block lg:hidden xl:hidden 2xl:hidden">
                 <button 
                   className="text-gray-600 dark:text-gray-300 focus:outline-none"
                   onClick={toggleMobileMenu}
@@ -233,21 +233,11 @@ export default function App() {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <p className="text-gray-400 text-sm mb-2 text-center">
-                Trusted by 10+ innovative companies to automate their workflows
-              </p>
-              <div className="flex flex-wrap justify-center gap-4 mb-4">
-                {["Bills on Solar", "TVG", "Sambright", "Self Mind", "Digital Qatalyst", "Tunza Jamii Properties", "Sambright Limited Company"].map((company, index) => (
-                  <span key={index} className="text-gray-300 text-sm bg-gray-800 px-3 py-1 rounded-full">
-                    {company}
-                  </span>
-                ))}
-              </div>
               <p className="text-gray-500 text-sm mb-2">
                 © 2025 Hammton Ndeke. All rights reserved.
               </p>
               <p className="text-gray-400 text-sm mb-1">
-                Let's build smarter systems — AI & N8n Automations.
+                Let's build smarter systems - AI & N8n Automations.
               </p>
               <p className="text-gray-600 text-xs">
                 Crafted with ❤️ and powered by AI automation
@@ -259,3 +249,4 @@ export default function App() {
     </div>
   );
 }
+

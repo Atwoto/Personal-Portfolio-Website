@@ -205,11 +205,11 @@ export function Contact() {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <p className="text-blue-300 text-sm mb-4">
-            Trusted by 50+ businesses to automate their workflows
+            Trusted by 10+ innovative companies to automate their workflows
           </p>
-          <div className="flex justify-center items-center gap-8 opacity-60">
-            {['TechFlow', 'DataCorp', 'AutomateXYZ', 'FlowMaster'].map((company, i) => (
-              <span key={i} className="text-white text-sm font-medium">
+          <div className="flex flex-wrap justify-center items-center gap-6 opacity-80">
+            {['Bills on Solar', 'TVG', 'Sambright', 'Self Mind', 'Digital Qatalyst', 'Tunza Jamii Properties', 'Sambright Limited Company'].map((company, i) => (
+              <span key={i} className="text-white text-sm font-medium bg-white/10 px-3 py-1 rounded-full">
                 {company}
               </span>
             ))}

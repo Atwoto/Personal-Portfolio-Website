@@ -93,7 +93,7 @@ export function About() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             {/* Professional Photo with Creative Frame */}
-            <div className="relative z-10 max-w-md mx-auto">
+            <div className="relative z-0 max-w-md mx-auto">
               <div className="relative group">
                 <img
                   src={exampleImage}
@@ -119,7 +119,7 @@ export function About() {
             
             {/* Floating Code Snippets */}
             <motion.div 
-              className="absolute top-8 -right-8 bg-gray-900 text-green-400 p-3 rounded-lg text-xs font-mono shadow-xl opacity-80"
+              className="absolute top-8 -right-8 z-20 bg-gray-900 text-green-400 p-3 rounded-lg text-xs font-mono shadow-xl opacity-80"
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             >
@@ -131,7 +131,7 @@ export function About() {
             </motion.div>
             
             <motion.div 
-              className="absolute bottom-8 -left-8 bg-blue-600 text-white p-3 rounded-lg text-xs font-medium shadow-xl opacity-80"
+              className="absolute bottom-8 -left-8 z-20 bg-blue-600 text-white p-3 rounded-lg text-xs font-medium shadow-xl opacity-80"
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
             >

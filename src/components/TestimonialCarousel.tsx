@@ -49,12 +49,8 @@ export function TestimonialCarousel() {
   const [isPaused, setIsPaused] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   
-  // Duplicate testimonials for infinite scrolling effect
-  const duplicatedTestimonials = [...testimonials, ...testimonials, ...testimonials];
-  const visibleTestimonials = duplicatedTestimonials.slice(
-    testimonials.length + currentIndex,
-    testimonials.length + currentIndex + testimonials.length
-  );
+  // Use the full list directly so all testimonials appear
+  // We still loop navigation with modulo arithmetic for an infinite effect
 
   useEffect(() => {
     if (isPaused) return;
@@ -131,7 +127,7 @@ export function TestimonialCarousel() {
       >
         <div className="flex transition-transform duration-500 ease-in-out" 
              style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-          {visibleTestimonials.map((testimonial, index) => (
+          {testimonials.map((testimonial, index) => (
             <div key={index} className="w-full flex-shrink-0 px-4">
               <div className="max-w-6xl mx-auto">
                 <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 h-full bg-gradient-to-br from-white to-gray-50">
